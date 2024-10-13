@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block main %}
+
+<div class="d-flex justify-content-center p-4">
+    <div class="col-6">
+        <div class="card bg-dark p-4">
+            <h3 class="text-light text-center">{{ title }}</h3>
+            <div class="card-body">
+                <form  action="" method="post">
+                    {% csrf_token %}
+
+                    <div class="form-floating flex-fill mb-4">
+                        {{ form.username }}
+                        <label for="{{ form.username.id_for_label }}" class="form-label">
+                            Имя пользователя
+                        </label>
+                    </div>
+                    
+                    <div class="form-floating flex-fill mb-4">
+                        {{ form.password }}
+                        <label for="{{ form.password.id_for_label }}" class="form-label">
+                            Пароль
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-success rounded" style="width: 150px;">Войти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock main %}

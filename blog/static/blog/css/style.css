@@ -1,0 +1,21 @@
+
+
+.card{
+    border: 2px solid blue !important;
+}
+
+.link_card{
+    text-decoration: none;
+    color: black;
+}
+
+.block_main{
+  background: url(../image/sport_bg.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* .link_card :hover{
+  transform: rotate(360deg) !important;
+  transition: 0.3s;
+} */

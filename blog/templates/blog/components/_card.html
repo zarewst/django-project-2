@@ -1,0 +1,25 @@
+<a href="{{ article.get_absolute_url }}" class="link_card">
+    <div class="col">
+        <div class="card">
+
+            {% if article.photo %}
+            <img src="{{ article.photo.url }}" alt="" class="card-img-top">
+            {% else %}
+            <img src="https://avatars.dzeninfra.ru/get-zen-logos/223306/pub_6190313e7f20be38219f9e9a_6196f8b7813ba17773a1f321/xxh"
+                 alt="" class="card-img-top">
+            {% endif %}
+
+            <div class="card-body"
+                 style="height:250px; display: flex; flex-direction: column; justify-content: space-between;">
+                <h5 class="card-title">{{ article.title }}</h5>
+                <p class="card-text">{{ article.content|truncatechars:100 }}</p>
+
+                <div class="d-flex justify-content-between">
+                    <p class="card-text">{{ article.created_at }}</p>
+                    <span class="small">Просмтры: {{ article.views }}</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</a>
